@@ -1,0 +1,4 @@
+activating env in windows-->
+.\env\Scripts\activate
+deactivate env in windows-->
+deactivate

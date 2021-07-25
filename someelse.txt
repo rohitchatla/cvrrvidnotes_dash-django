@@ -2,3 +2,6 @@ activating env in windows-->
 .\env\Scripts\activate
 deactivate env in windows-->
 deactivate
+
+
+//heroku env(makemigration after not getting done requirements file though installed) and normally all steps done

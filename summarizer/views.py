@@ -297,6 +297,10 @@ class MyView(APIView):
         subject = 'Welcome to StandNote!'
         message = 'Thanks for using StandNote. Your meeting notes are ready. Please head over to your Dashboard at: https://standnote.netlify.app/dashboard to view your notes.'
         recepient = request.data.get('email')
-        send_mail(subject, message, EMAIL_HOST_USER,
+        try:
+
+            send_mail(subject, message, EMAIL_HOST_USER,
                   [recepient], fail_silently=False)
+        except:
+            print("Sending mail falied")
         return Response(data={"summerised_text": text})
